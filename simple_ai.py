@@ -51,6 +51,7 @@ def decide(width, height, my_score, other_score,
            board, pacman, ghosts, constants,
            my_side, other_side, current_cycle, cycle_duration):
     global ghost_is_triggered
+    global food_map_copy
     food_map_copy = 0
     food_board = copy.deepcopy(board)
 
@@ -99,6 +100,7 @@ def decide(width, height, my_score, other_score,
 
     def pacman_eat_food():
         print('pacman_eat_food')
+        global food_map_copy
         if food_map_copy == 0:
             map_copy_food()
 
